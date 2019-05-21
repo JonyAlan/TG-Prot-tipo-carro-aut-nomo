@@ -224,3 +224,18 @@ void loop() {
     delay (1000);
   }
 }
+//Lembrete, esta versão esta desatualizada, 
+//Nova lógica para obter a direão.
+if(graus >= sentido -1 && graus <= sentido +1){
+  servo(90);
+}else if(graus < sentido -1 && graus < 180 ){
+  servo(180);
+} else if(graus > sentido + 1 && graus < 180){
+  servo (0);
+}else if(graus < sentido && graus > 180){
+  servo(-1)
+}else if(graus < sentido && graus < 180){
+  servo(-2)
+}
+
+
