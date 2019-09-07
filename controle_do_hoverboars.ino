@@ -1,7 +1,7 @@
 int motores = 6; // motores na saida pwm
 int direcao = 5;
-int velocidade = 128;
-int lado = 116;
+int velocidade = 115;
+int lado = 105;
 char sentido = 'F';
  
 void setup() {
@@ -24,7 +24,7 @@ void loop() {
         break;
         
         case 'F':            
-          velocidade = 126;
+          velocidade = 115;
           sentido = 'F';
         break;
         
@@ -33,31 +33,31 @@ void loop() {
         break;
 
         case 'D':            
-          lado = 210;
+          lado = 150;
         break;
 
         case 'E':            
-          lado = 0;
+          lado = 50;
         break;
 
         case 'C':            
-          lado = 116;
+          lado = 105;
         break;
       }
    }
    if(strcmp(sentido,'F') == 0){
-     if(velocidade > 127 && velocidade < 148) {
+     if(velocidade > 114 && velocidade < 148) {
        analogWrite(motores, velocidade);
      }
      if(velocidade > 148){
        velocidade = 147;
      }
-     if(velocidade < 127){
-       velocidade = 128;
+     if(velocidade < 114){
+       velocidade = 115;
      }
    }else if(strcmp(sentido,'T') == 0){
        analogWrite(motores, 76);
-       lado = 116 
+       lado = 105 ;
    }
    analogWrite(direcao, lado);
    
