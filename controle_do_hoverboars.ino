@@ -33,11 +33,11 @@ void loop() {
         break;
 
         case 'D':            
-          lado = 150;
+          lado = 130;
         break;
 
         case 'E':            
-          lado = 50;
+          lado = 70;
         break;
 
         case 'C':            
@@ -59,7 +59,5 @@ void loop() {
        analogWrite(motores, 76);
        lado = 105 ;
    }
-   analogWrite(direcao, lado);
-   
-      
+   analogWrite(direcao, lado); 
 }  
